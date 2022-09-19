@@ -1,0 +1,12 @@
+:root {
+    --buttonback: #15191f;
+    --background: #0f1216;
+}
+
+header {
+    height: 61px;
+    width: 100%;
+    top: 0;
+    background-color: var(--buttonback);
+}
+
