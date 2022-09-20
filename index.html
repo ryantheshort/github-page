@@ -9,39 +9,50 @@
     src="https://kit.fontawesome.com/ee38da0747.js" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/normalize.css">
 
 </head>
 <body>
-    <header>
-        <div class="header-bar">
-            <nav class="navbar">
-                <a href="#" class="fa-brands fa-github"></a>
-                <a><select name="jump-to" id="jump-to">
-                    <option value="github-page">ryantheshort/github-page</option>
+    
+        <nav class="navbar">
+            <span href="#" class="fa-brands fa-github logo"></span>
+            <input class="jump-to-bar" type="text" placeholder="Search or jump to..." size="30">
+                    <!-- <option value="github-page">ryantheshort/github-page</option>
                     <option value="js-array-practice">ryantheshort/js-array-practice</option>
-                    <option value="js-war-game">ryantheshort/js-war-game</option>
-                </select></a>
-                <a href="#">Pull requests</a>
-                <a href="#">Issues</a>
-                <a href="#">Marketplace</a>
-                <a href="#">Explore</a>
-            </nav>
+                    <option value="js-war-game">ryantheshort/js-war-game</option> -->
+                <!-- </select></a> -->
+            <ul class="navlinks">  
+                <li><a href="#">Pull requests</a></li>
+                <li><a href="#">Issues</a></li>
+                <li><a href="#">Marketplace</a></li>
+                <li><a href="#">Explore</a></li>
+            </ul>
+            <!-- Your Profile Icon/dropdown here-->
             <ul class="profile-icons">
-                <li a href="#" class="fa-regular fa-bell"></li>
-                <li a>  <select href="#" class="fa-stack fa-2x">
-                            <i class="fa-sharp fa-solid fa-plus"></i>
-                            <i class="fa-sharp fa-solid fa-caret-down"></i></a>
-                        <option value="new-repository">New repository</option>
-                        <option value="import-repository">Import repository</option>
-                        <option value="new-gist">New gist</option>
-                        <option value="new-organization">New organization</option>
-                        <option value="new-project">New project</option>
-                    </select></a></li>
+                <li><a href="#" class="fa-regular fa-bell"></li>
+                <li><a href="#" class="fa-stack fa-2x">
+                <li><a href="#"><img src="" alt=""></a></li>           
+            </ul>           
+        </nav>  
+<!-- END of NAV bar --> 
+     
+     
+    <!-- MAIN CONTAINER-->
+    <section class="container-main">
+        <div class="top-sticky"> <!-- STICKY BAR -->
+            <ul class="sticky-options">
+                <li a href="#" class="fa-thin fa-book-open">Overview</li>
+                <li a href="#" class="fa-light fa-bookmark">Repositories</li>
+                <li a href="#" class="fa-light fa-table-layout">Projects</li>
+                <li a href="#" class="fa-light fa-cube">Packages</li>
+                <li a href="#" class="fa-regular fa-star">Stars</li>
             </ul>
         </div>
-    </header>
+    </section>
 
+
+    
     
 </body>
 </html>
