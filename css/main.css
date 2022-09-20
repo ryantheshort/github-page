@@ -38,7 +38,7 @@ a {
     padding: 0 30px 0 30px;
     height: 61px;
     justify-content: flex-start;
-    background-color: var(--background);
+    background-color: var(--buttonback);
     top: 0;
 }
 
@@ -81,4 +81,60 @@ a {
     display: flex;
     align-items: center;
     margin: 0 0 0 auto;
+}
+
+.profile-icons > li {
+    padding: 10px;
+    
+}
+/* STICKY bar */
+.page-sticky { /* Contains container */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #31363c;
+    background-color: var(--background);
+
+}
+
+.container-sticky { /* IS container */
+    width: 85%;
+    height: 100%;
+    display: flex;
+}
+
+.filler-spot { /*gives a gap */
+    width: 26.6%;
+}
+
+.sticky-options {
+    width: 73.5%;
+    display: flex;
+    padding: 0;
+    align-items: center;
+    margin: 0;
+    height: 50px;
+}
+
+.sticky-options > li {
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.sticky-options > li > a:hover {
+    background-color: #21262a;
+}
+
+.sticky-options > li > a {
+    display: block;
+    height: 100%;
+    color: #f1f6fb;
+    font-size: 14px;
+    margin: 10px;
+    padding: 5x 10px;
+    border-radius: 5px;
 }
