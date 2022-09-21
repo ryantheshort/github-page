@@ -23,37 +23,73 @@
                     <option value="js-war-game">ryantheshort/js-war-game</option> -->
                 <!-- </select></a> -->
             <ul class="navlinks">  
-                <li><a href="#"> Pull requests</a></li>
-                <li><a href="#"> Issues</a></li>
-                <li><a href="#"> Marketplace</a></li>
-                <li><a href="#"> Explore</a></li>
+                <li><a href="#">Pull requests</a></li>
+                <li><a href="#">Issues</a></li>
+                <li><a href="#">Marketplace</a></li>
+                <li><a href="#">Explore</a></li>
             </ul>
             <!-- Your Profile Icon/dropdown here-->
             <ul class="profile-icons">
-                <li><a href="#" class="fa-regular fa-bell"></li>
-                <li><a href="#" class="fa-solid fa-plus"> <!-- Don't Forget About dropdown bars-->
-                <li><a href="#"><img src="" alt=""></a></li>   <!-- Add Profile Image Here-->        
+                <li><a href="#" class="fa-regular fa-bell"></span></a></li>
+                <li><a href="#" class="fa-solid fa-plus"><span class="fa-solid fa-caret-down"></span></a></li>
+                <li><a class="profile-link-img" href="#"><img src="" alt=""> <span class="fa-solid fa-caret-down"></span></a></li>   <!-- Add Profile Image Here-->        
             </ul>           
         </nav>  
 <!-- END of NAV bar --> 
      
   <main>
-    <!-- MAIN CONTAINER-->
+    
     <section class="page-sticky">
         <div class="container-sticky"> <!-- STICKY BAR -->
             <div class="filler-spot"></div>
             <ul class="sticky-options">
                 <li><a href="#"><span class="fa-thin fa-book-open"></span> Overview</a></li>
-                <li><a href="#"><span class="fa-light fa-bookmark"></span> Repositories</a></li>
+                <li id="active-page"><a class="repo-page" href="#"><span class="fa-light fa-bookmark"></span> Repositories</a></li>
                 <li><a href="#"><span class="fa-light fa-table-layout"></span> Projects</a></li>
                 <li><a href="#"><span class="fa-light fa-cube"></span> Packages</a></li>
                 <li><a href="#"><span class="fa-regular fa-star"></span> Stars</a></li>
             </ul>
         </div>
     </section>
+    <section class="main-container">
+        <aside class="sidebar">
+            <h5>Organizations</h5>
+            <div class="organizations"></div>
+        </aside>
 
-
+    </section>
+    <section class="projects-container">
+        <div class="search-repo">
+            <input type="text" placeholder="Find a repository...">
+            <div class="sort-buttons">
+                <button>Type <span class="fa-solid fa-caret-down"></span></button>
+                <button>Language <span class="fa-solid fa-caret-down"></span></button>
+                <button>Sort <span class="fa-solid fa-caret-down"></span></button>
+            </div>
+            <button class="new-button"><span class="fa-solid fa-book-bookmark"></span></button>
+        </div>
+        <ul class="row repo-list"></ul>
+    </section>
+</section>
     
-    </main>   
+    </main>
+    
+    <footer>
+        <div class="footer-logo"><span class="fa-brands fa-github logo"></span> @ 2022 Github, Inc.</div>
+        <ul class="footer-links">
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Status</a></li>
+            <li><a href="#">Docs</a></li>
+            <li><a href="#">Contact GitHub</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">API</a></li>
+            <li><a href="#">Training</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+
+    </footer>
 </body>
 </html>

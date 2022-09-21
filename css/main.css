@@ -2,20 +2,23 @@
 html {
     box-sizing: border-box;
     height: 100%;
+    
 }
 
 *, *::before, *::after {
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
     --buttonback: #15191f;
     --background: #0f1216;
-}
+}   
 
 body {
+    background-color: var(--background);
     min-height: 100vh;
-
 }
 
 li {
@@ -26,6 +29,9 @@ a {
     text-decoration: none;
 }
 
+main {
+    background-color: var(--background);
+}
 
 
 .navbar {
@@ -98,7 +104,7 @@ a {
     top: 0;
     border-bottom: 1px solid #31363c;
     background-color: var(--background);
-
+    
 }
 
 .container-sticky { /* IS container */
@@ -118,6 +124,7 @@ a {
     align-items: center;
     margin: 0;
     height: 50px;
+    color: #f1f6fb;
 }
 
 .sticky-options > li {
@@ -137,4 +144,14 @@ a {
     margin: 10px;
     padding: 5x 10px;
     border-radius: 5px;
+}
+
+/* MAIN */
+
+.projects-container {
+    width: 85%;
+    display: flex;
+    margin: auto;
+    position: relative;
+
 }
