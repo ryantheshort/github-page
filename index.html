@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub Page</title>
+
     <script 
     src="https://kit.fontawesome.com/ee38da0747.js" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" href="css/main.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="css/normalize.css">
-
+    <link rel="stylesheet" href="css/git-colors.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     
@@ -91,6 +92,18 @@
         </ul>
 
     </footer>
+<!-- SCRIPTS for Handlebars -->
+
+
+    <script id="userdata-sidebar-template" type="text/x-handlebars-template">
+        <a class="profile-picture" href="{{html_url}}"><img src="{{avatar_url}}" alt="Profile picture"></a><a class="img-smile" href=""><span class="fa-regular fa-face-smile"></span><span class="status">Set status</span></a>
+        <h2>{{name}}</h2>
+        <h4>{{login}}</h4>
+        <button class="edit-profile">Edit profile</button>
+        <p><span class="fa-solid fa-rocket"></span> Joined {{created_at}}</p>
+    </script>
+
+    </script>
 
     <script id="repo-list-template" type="text/x-handlebars-template">
         {{#each repoData}}   
@@ -108,10 +121,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-    <script src="js/main.js" ></script>
-    <script src="js/orgs.js" ></script>
-    <script src="js/repo.js" ></script>
-    <script src="js/userdata.js"></script>
-
+    <script src="/js/main.js" type="module"></script>
+    
 </body>
 </html>

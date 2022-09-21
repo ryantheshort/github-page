@@ -1,4 +1,4 @@
-const orgs = [
+export const orgsData = [
     {
       "login": "ccs-summer-2022",
       "id": 112399320,

@@ -1,4 +1,4 @@
-const userData = {
+export const userData = {
     "login": "ryantheshort",
     "id": 112423383,
     "node_id": "U_kgDOBrNx1w",
@@ -25,7 +25,7 @@ const userData = {
     "hireable": null,
     "bio": null,
     "twitter_username": null,
-    "public_repos": 12,
+    "public_repos": 11,
     "public_gists": 0,
     "followers": 0,
     "following": 0,
