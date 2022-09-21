@@ -155,3 +155,116 @@ main {
     position: relative;
 
 }
+
+/* SIDEBARS */
+
+.sidebar {
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    position: relative;
+}
+
+/* Projects Container */
+
+.projects-container {
+    flex-grow: 1;
+    padding: 0 10px;
+}
+.projects-container .search-repo {
+    padding: 15px 0;
+    border-bottom: 1px solid #31363c;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.search-repo > input {
+    background-color: #0e1116;
+    border: 1px solid #31363c;
+    border-radius: 5px;
+    color: #cad1d8;
+    font-size: 14px;
+    padding: 6px 10px;
+    flex-grow: 8;
+}
+.search-repo > input:focus {
+    outline: 2px solid #69a0f3;
+}
+.search-repo button {
+    display: inline-block;
+    padding: 8px 18px;
+    border: 1px solid #31363c;
+    background-color: #22262C;
+    color: #cad1d8;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 8px;
+}
+.search-repo button:hover {
+    border: 1px solid #cad1d8;
+    background-color: #494e56;
+}
+.search-repo .new-button {
+    flex-grow: 1;
+    padding: 8px 12px;
+    border: none;
+    background-color: #007a36;
+}
+.search-repo .new-button:hover {
+    border: none;
+    background-color: #009543;
+}
+.search-repo .sort-buttons {
+    flex-grow: 2;
+    text-align: center;
+}
+.repo-list {
+    padding: 0 10px;
+}
+.repo-list > li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #31363c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* FOOTER ===== */
+
+footer {
+    position: relative;
+    width: 85%;
+    margin: 20px auto 40px auto;
+    padding-top: 20px;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid #31363c;
+}
+footer .footer-logo {
+    display: block;
+    font-size: 12px;
+    color: #31363c;
+}
+.footer-links {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+.footer-links > li {
+    margin: 20px;
+}
+.footer-links > li > a {
+    font-size: 12px;
+    color: #69a0f3;
+}
+.footer-links > li > a:hover {
+    text-decoration: underline;
+}
