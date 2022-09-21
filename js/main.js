@@ -8,7 +8,10 @@ import { orgsData } from "./orgs.js";
 
 
 // REPO #
-
+const sourceNum = document.querySelector("#repo-num-template").innerHTML;
+const templateNum = Handlebars.compile(sourceNum);
+const htmlNum = templateNum(userData);
+document.querySelector(".repo-page").insertAdjacentHTML("beforeend", htmlNum);
 
 
 // USER SIDEBAR
@@ -18,7 +21,10 @@ const htmlUserData = templateUserData(userData);
 document.querySelector(".sidebar").insertAdjacentHTML("afterbegin", htmlUserData);
 
 // ORGS
-
+const sourceOrgs = document.querySelector("#organizations-template").innerHTML;
+const templateOrgs = Handlebars.compile(sourceOrgs);
+const htmlOrgs = templateOrgs(orgsData);
+document.querySelector(".organizations").insertAdjacentHTML("afterbegin", htmlOrgs);
 
 
 // REPO PROJECTS
