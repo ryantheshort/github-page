@@ -1,9 +1,9 @@
 import { userData } from "./userdata.js";
-import { repoData } from "./repo.js"
+import { repoData } from "./repo.js";
 import { orgsData } from "./orgs.js";
 
 (function() { //IIFE = Immediately Invoked Function Expression. 
-    'use strict';
+    'use strict'
 
 
 
