@@ -10,70 +10,130 @@
     src="https://kit.fontawesome.com/ee38da0747.js" crossorigin="anonymous">
     </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/git-colors.css">
+    <link rel="stylesheet" href="css/language_colors.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    
-        <nav class="navbar">
-            <span href="#" class="fa-brands fa-github logo"></span>
-            <input class="jump-to-bar" type="text" placeholder="Search or jump to..." size="30">
-                    <!-- <option value="github-page">ryantheshort/github-page</option>
-                    <option value="js-array-practice">ryantheshort/js-array-practice</option>
-                    <option value="js-war-game">ryantheshort/js-war-game</option> -->
-                <!-- </select></a> -->
-            <ul class="navlinks">  
-                <li><a href="#">Pull requests</a></li>
-                <li><a href="#">Issues</a></li>
-                <li><a href="#">Marketplace</a></li>
-                <li><a href="#">Explore</a></li>
-            </ul>
-            <!-- Your Profile Icon/dropdown here-->
-            <ul class="profile-icons">
-                <li><a href="#" class="fa-regular fa-bell"></span></a></li>
-                <li><a href="#" class="fa-solid fa-plus"><span class="fa-solid fa-caret-down"></span></a></li>
-                <li><a class="profile-link-img" href="#"><img src="" alt=""> <span class="fa-solid fa-caret-down"></span></a></li>   <!-- Add Profile Image Here-->        
-            </ul>           
-        </nav>  
+    <header>
+        <div>
+            <a class="github1" href="www.github.com"
+              ><i class="fa-brands fa-github github11"></i
+            ></a>
+          </div>
+          <div class="search-plus-right-side">
+            <div class="search-header">
+              <input
+                class="form-control input-search1"
+                data="text"
+                type="search"
+                placeholder="Search or jump to..."
+              />
+              <div class="search-links">
+                <a href="#">Pull requests</a>
+                <a href="#">Issues</a>
+                <a href="https://github.com/marketplace">Marketplace</a>
+                <a href="#">Explore</a>
+              </div>
+            </div>
+            <div class="right-side-header">
+              <a class="right-side-links" href="#"
+                ><i class="fa-regular fa-bell"></i
+              ></a>
+              <div class="plus-down">
+                <a class="right-side-links" href="#"
+                  ><i class="fa-solid fa-plus"></i>
+                  <i class="fa-solid fa-sort-down"></i
+                ></a>
+              </div>
+              <div class="avatar-container">
+                <div class="avatar">
+                  <a class="right-side-links" href="#"
+                    ><img src="./images/profile.jpeg" />
+                    <i class="fa-solid fa-sort-down"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+    </header>
+      
 <!-- END of NAV bar --> 
      
-  <main>
-    
-    <section class="page-sticky">
-        <div class="container-sticky"> <!-- STICKY BAR -->
-            <div class="filler-spot"></div>
-            <ul class="sticky-options">
-                <li><a href="#"><span class="fa-thin fa-book-open"></span> Overview</a></li>
-                <li id="active-page"><a class="repo-page" href="#"><span class="fa-light fa-bookmark"></span> Repositories</a></li>
-                <li><a href="#"><span class="fa-light fa-table-layout"></span> Projects</a></li>
-                <li><a href="#"><span class="fa-light fa-cube"></span> Packages</a></li>
-                <li><a href="#"><span class="fa-regular fa-star"></span> Stars</a></li>
-            </ul>
-        </div>
+<main>
+    <section class="sticky-bar">
+      <ul class="profile-nav">
+        <li class="profile-nav-links">
+          <a href="#"> <i class="fa-solid fa-book-open"></i> Overview </a>
+        </li>
+        <li class="profile-nav-links repo">
+          <a href="#"
+            ><i class="fa-solid fa-book-bookmark"></i> Repositories
+            <span class="repo-count-highlight"> 12</span></a
+          >
+        </li>
+        <li class="profile-nav-links">
+          <a href="#"><i class="fa-regular fa-square"></i> Projects</a>
+        </li>
+        <li class="profile-nav-links">
+          <a href="#"><i class="fa-solid fa-cube"></i> Packages</a>
+        </li>
+        <li class="profile-nav-links">
+          <a href="#"
+            ><i class="fa-regular fa-star"></i> Stars
+            <span class="repo-count-highlight"> 1</span></a
+          >
+        </li>
+      </ul>
     </section>
-    <section class="main-container">
-        <aside class="sidebar">
-            <h5>Organizations</h5>
-            <div class="organizations"></div>
-        </aside>
-
-    
-    <section class="projects-container">
+    <container class="main-container">
+      <aside class="layout-sidebar">
+        <div class="user-section"></div>
+        <div class="organizations">Organizations</div>
+        <ul class="organization-avatars"></ul>
+      </aside>
+      <main class="layout-main">
         <div class="search-repo">
-            <input type="text" placeholder="Find a repository...">
-            <div class="sort-buttons">
-                <button>Type <span class="fa-solid fa-caret-down"></span></button>
-                <button>Language <span class="fa-solid fa-caret-down"></span></button>
-                <button>Sort <span class="fa-solid fa-caret-down"></span></button>
+          <input
+            class="form-control input-search2"
+            data="text"
+            type="search"
+            placeholder="Find a repository..."
+          />
+          <div class="sort-search">
+            <button class="repo-btns dropbtn">
+              Type
+              <i class="fa-solid fa-sort-down"></i>
+            </button>
+            <div id="dropdown-btn" class="dropdown-content">
+              <div class="dropdown-option select-type">Select type</div>
+              <a href="#" class="dropdown-option"
+                ><i class="fa-solid fa-check"></i> All</a
+              >
+              <a href="#" class="dropdown-option">Public</a>
+              <a href="#" class="dropdown-option">Private</a>
+              <a href="#" class="dropdown-option">Sources</a>
+              <a href="#" class="dropdown-option">Forks</a>
+              <a href="#" class="dropdown-option">Archives</a>
+              <a href="#" class="dropdown-option">Mirrors</a>
+              <a href="#" class="dropdown-option">Templates</a>
             </div>
-            <button class="new-button"><span class="fa-solid fa-book-bookmark"></span> New</button>
+            <button class="repo-btns">
+              Language
+              <i class="fa-solid fa-sort-down"></i>
+            </button>
+            <button href="#" class="repo-btns">
+              Sort
+              <i class="fa-solid fa-sort-down"></i>
+            </button>
+          </div>
+          <button class="repo-btns green-btn">
+            <i class="fa-solid fa-book-bookmark"></i> New
+          </button>
         </div>
-        <ul class="row repo-list"></ul>
-    </section>
-    </section>
-    
-    </main>
+        <ul class="repository-list"></ul>
+      </main>
+    </container>
+</main>
     
     <footer>
         <div class="footer-logo"><span class="fa-brands fa-github logo"></span> @ 2022 Github, Inc.</div>

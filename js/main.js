@@ -1,50 +1,59 @@
-import { userData } from "./userdata.js";
-import { repoData } from "./repo.js";
-import { orgsData } from "./orgs.js";
-
-(function() { //IIFE = Immediately Invoked Function Expression. 
-    'use strict'
-
-
+("use strict");
+const button = document.querySelector(".dropbtn");
 
 // REPO #
-const sourceNum = document.querySelector("#repo-num-template").innerHTML;
-const templateNum = Handlebars.compile(sourceNum);
-const htmlNum = templateNum(userData);
-document.querySelector(".repo-page").insertAdjacentHTML("beforeend", htmlNum);
+function generateHTML(json) {
+    const repoSource = document.getElementById("repo-template").innerHTML;
+    const repoTemplate = Handlebars.compile(repoSource);
+    const repoHtml = repoTemplate({ repos: json });
+document.querySelector(".repository-list").insertAdjacentHTML("afterbegin", repoHtml);
+}
 
+fetch(`https://api.github.com/users/ryantheshort/repos`)
+    .then((response) => response.json())
+    .then((json) => generateHTML(json));
 
 // USER SIDEBAR
-const sourceUserData = document.querySelector("#userdata-sidebar-template").innerHTML;
-const templateUserData = Handlebars.compile(sourceUserData);
-const htmlUserData = templateUserData(userData);
-document.querySelector(".sidebar").insertAdjacentHTML("afterbegin", htmlUserData);
+function generateUserHTML(json) {
+    const userSource = document.getElementById("user-template").innerHTML;
+    const userTemplate = Handlebars.compile(userSource);
+    const userHtml = userTemplate(json);
+document.querySelector(".user-section").insertAdjacentHTML("afterbegin", userHtml);
+}
+
+fetch(`https://api.github.com/users/ryantheshort`)
+    .then((response) => response.json())
+    .then((json) => generateUserHTML(json));
+
 
 // ORGS
-const sourceOrgs = document.querySelector("#organizations-template").innerHTML;
-const templateOrgs = Handlebars.compile(sourceOrgs);
-const htmlOrgs = templateOrgs(orgsData);
-document.querySelector(".organizations").insertAdjacentHTML("afterbegin", htmlOrgs);
+function generateOrgHTML(json) {
+    const orgSource = document.getElementById("orgs-template").innerHTML;
+    const orgTemplate = Handlebars.compile(orgSource);
+    const orgHtml = orgTemplate({ orgs: json });
+document.querySelector(".organization-avatars").insertAdjacentHTML("afterbegin", orgHtml);
+}
+
+fetch(`https://api.github.com/users/ryantheshort/orgs`)
+    .then((response) => response.json())
+    .then((json) => generateOrgHTML(json));
 
 
-// REPO PROJECTS
-const sourceRepo = document.querySelector("#repo-list-template").innerHTML;
-const templateRepo = Handlebars.compile(sourceRepo);
+// BUTTON
 
+button.addEventListener("click", function myFunction() {
+    document.getElementById("dropdown-btn").classList.toggle("show");
+});
 
-const repos = {
-    repoData,
-};
-const htmlRepo = templateRepo(repos);
-document.querySelector(".repo-list").insertAdjacentHTML("afterbegin", htmlRepo);
-
-const codeType = document.querySelector(".code-type");
-const codeColor = document.querySelector(".code-color");
-const name = document.querySelector(".name");
-
-function changeLanguageColor() {}
-changeLanguageColor();
-
-
-// NOTHING BELOW THIS LINE...S
-})();
+window.onclick = function (event) {
+    if (!event.target.matches(".dropbtn")) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains("show")) {
+          openDropdown.classList.remove("show");
+        }
+      }
+    }
+  };
